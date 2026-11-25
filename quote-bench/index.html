@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quote Bench · a sample quote comparison</title>
+<meta name="description" content="Quote Bench compares three fictional studios for a small website. Change the pages, extras, and timeline. The sample prices stay in your browser.">
+<link rel="canonical" href="https://aleex9311.github.io/quote-bench/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Quote Bench · sample quote comparison">
+<meta property="og:description" content="A small web app that compares fictional studio quotes for a website. Nothing is sent.">
+<meta property="og:url" content="https://aleex9311.github.io/quote-bench/">
+<meta property="og:image" content="https://aleex9311.github.io/quote-bench/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Quote Bench, a sample comparison of three fictional studio quotes">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quote Bench · sample quote comparison">
+<meta name="twitter:description" content="Compare three fictional studios. The figures update in the browser.">
+<meta name="twitter:image" content="https://aleex9311.github.io/quote-bench/og.png">
+<meta name="theme-color" content="#1c1916">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="top">
+  <a class="mark" href="#top">Quote Bench</a>
+  <span class="badge">Sample project</span>
+</header>
+<main id="content">
+  <section class="intro" id="top">
+    <div class="wrap">
+      <p class="kicker">Sample project · Web app</p>
+      <h1>Quote Bench</h1>
+      <p class="lede">Compare three fictional studios for a small website. Change the brief and the sample prices update in this browser. Nothing is sent.</p>
+      <p class="hint">Aleks is not one of these studios. The numbers are made up for the demonstration.</p>
+    </div>
+  </section>
+
+  <section class="tool" aria-label="Comparison">
+    <div class="wrap">
+      <form id="brief">
+        <fieldset class="brief">
+          <legend>Project brief</legend>
+          <div class="controls">
+            <div>
+              <label for="pages">Pages</label>
+              <div class="stepper">
+                <button type="button" id="pages-dec" aria-label="Fewer pages">−</button>
+                <input id="pages" name="pages" type="number" min="1" max="20" value="5" inputmode="numeric" aria-describedby="pages-help">
+                <button type="button" id="pages-inc" aria-label="More pages">+</button>
+              </div>
+              <p class="hint" id="pages-help">From 1 to 20 pages.</p>
+            </div>
+            <label class="check"><input id="booking" name="booking" type="checkbox"> Booking or a small shop</label>
+            <label class="check"><input id="copy" name="copy" type="checkbox"> Copywriting included</label>
+          </div>
+          <label class="check"><input id="rush" name="rush" type="checkbox" aria-describedby="rush-help"> Rush timeline</label>
+          <p class="hint" id="rush-help">Rush multiplies the sample total. Paperlane ×1.5, Northglass ×1.35, Holm &amp; Co. ×1.25.</p>
+        </fieldset>
+      </form>
+      <p id="summary" aria-live="polite">Lowest sample quote: Paperlane, €1,340.</p>
+      <div class="results">
+        <article class="quote is-low" id="quote-paperlane" aria-labelledby="name-paperlane">
+          <p class="flag" data-flag>Lowest sample</p>
+          <p class="studio" id="name-paperlane">Paperlane</p>
+          <p class="total" data-total>€1,340</p>
+          <dl data-lines>
+            <div class="line"><dt>Base</dt><dd>€640</dd></div>
+            <div class="line"><dt>5 pages</dt><dd>€700</dd></div>
+          </dl>
+          <p class="note">A lean sample: fewer rounds, plain pages.</p>
+        </article>
+        <article class="quote" id="quote-northglass" aria-labelledby="name-northglass">
+          <p class="flag" data-flag hidden>Lowest sample</p>
+          <p class="studio" id="name-northglass">Northglass</p>
+          <p class="total" data-total>€1,800</p>
+          <dl data-lines>
+            <div class="line"><dt>Base</dt><dd>€900</dd></div>
+            <div class="line"><dt>5 pages</dt><dd>€900</dd></div>
+          </dl>
+          <p class="note">A middle sample with more time for structure.</p>
+        </article>
+        <article class="quote" id="quote-holm" aria-labelledby="name-holm">
+          <p class="flag" data-flag hidden>Lowest sample</p>
+          <p class="studio" id="name-holm">Holm &amp; Co.</p>
+          <p class="total" data-total>€2,300</p>
+          <dl data-lines>
+            <div class="line"><dt>Base</dt><dd>€1,200</dd></div>
+            <div class="line"><dt>5 pages</dt><dd>€1,100</dd></div>
+          </dl>
+          <p class="note">The slowest fictional studio. More writing, a smaller rush premium.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="about">
+    <div class="wrap">
+      <h2>Fictional rates</h2>
+      <p>JavaScript updates the cards. Without it, the figures above are the default brief: 5 pages, no extras, no rush. The studios are invented and these are not offers of work.</p>
+      <div class="table-scroll">
+      <table class="rates">
+        <caption>Rates used by the comparison</caption>
+        <thead>
+          <tr>
+            <th scope="col">Studio</th>
+            <th scope="col">Base</th>
+            <th scope="col">Per page</th>
+            <th scope="col">Booking or shop</th>
+            <th scope="col">Copy, per page</th>
+            <th scope="col">Rush</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Paperlane</th>
+            <td>€640</td><td>€140</td><td>€300</td><td>€45</td><td>×1.5</td>
+          </tr>
+          <tr>
+            <th scope="row">Northglass</th>
+            <td>€900</td><td>€180</td><td>€420</td><td>€60</td><td>×1.35</td>
+          </tr>
+          <tr>
+            <th scope="row">Holm &amp; Co.</th>
+            <td>€1,200</td><td>€220</td><td>€560</td><td>€80</td><td>×1.25</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+      <noscript><p>This comparison needs JavaScript to recalculate. It still runs only in your browser.</p></noscript>
+    </div>
+  </section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <p class="badge">Sample project</p>
+    <p>Paperlane, Northglass, and Holm &amp; Co. are fictional.</p>
+    <p>Website by <a href="https://aleex9311.github.io/">Aleks Kmetec</a></p>
+  </div>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

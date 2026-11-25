@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to update · The Lantern Keeper</title>
+<meta name="description" content="How to add a journal entry to The Lantern Keeper and how to upload the site to Hostinger.">
+<link rel="canonical" href="https://aleex9311.github.io/the-lantern-keeper/how-to-update.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="How to update · The Lantern Keeper">
+<meta property="og:description" content="How to add a journal entry and how to upload this sample author site.">
+<meta property="og:url" content="https://aleex9311.github.io/the-lantern-keeper/how-to-update.html">
+<meta property="og:image" content="https://aleex9311.github.io/the-lantern-keeper/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sample cover for the novel The Lantern Keeper by Mara Ellison">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How to update · The Lantern Keeper">
+<meta name="twitter:description" content="How to add a journal entry and how to upload this sample author site.">
+<meta name="twitter:image" content="https://aleex9311.github.io/the-lantern-keeper/og.png">
+<meta name="theme-color" content="#16343a">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+<header class="top">
+  <a class="mark" href="index.html">The Lantern Keeper</a>
+  <nav aria-label="Primary">
+    <a href="index.html">Home</a>
+    <a href="book.html">The book</a>
+    <a href="author.html">The author</a>
+    <a href="blog.html">Journal</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <span class="badge">Sample project</span>
+</header>
+<main id="content" class="wrap prose guide">
+  <p class="kicker">How to update</p>
+  <h1>Journal and Hostinger</h1>
+  <p>The site is an ordinary package of files. There is no database and no build step. The page text is in HTML. Journal entries are in <code>posts.json</code>.</p>
+  <p>Open the site through its address, or through a local web server. If you open an HTML file directly from a folder, the journal may not load.</p>
+  <h2>A new entry</h2>
+  <ol>
+    <li>Open <code>posts.json</code> in a text editor.</li>
+    <li>Copy one existing entry, including the curly braces.</li>
+    <li>Change <code>slug</code> (a short name used in the address, with no spaces), <code>title</code>, <code>date</code> in the form 2026-11-25, <code>excerpt</code>, and <code>body</code>.</li>
+    <li>In <code>body</code>, a blank line separates paragraphs. <code>## </code> at the start of a paragraph makes a subheading. <code>*word*</code> is italic, and <code>**word**</code> is bold.</li>
+    <li>Save the file. Leave a comma between entries. The last entry has no comma after it.</li>
+  </ol>
+  <pre><code>{
+  "slug": "a-clear-night",
+  "title": "A clear night",
+  "date": "2026-11-25",
+  "excerpt": "One or two sentences for the journal list.",
+  "body": "First paragraph.\n\n## A subheading\n\nNext paragraph, with an *italic* word."
+}</code></pre>
+  <h2>Upload to Hostinger</h2>
+  <ol>
+    <li>In hPanel, open Websites, choose the site, then Files, then File Manager.</li>
+    <li>Open the <code>public_html</code> folder. If the site should live in a subfolder, create that folder and open it.</li>
+    <li>Upload all the files from this folder: the HTML files, <code>site.css</code>, <code>site.js</code>, <code>posts.json</code>, and the icon and social image if you want them.</li>
+    <li>You can send the same package by FTP (for example with FileZilla) into <code>public_html</code>. The host, username, and password are in hPanel under FTP accounts.</li>
+    <li>Refresh the page in the browser. The new entry shows on the Journal page and on the home page.</li>
+  </ol>
+  <h2>Shop buttons and page text</h2>
+  <p>The Bookshop, Amazon, and Barnes &amp; Noble buttons point at example.com. In <code>index.html</code> and <code>book.html</code>, replace those addresses with the real shop links. Edit the paragraphs about the book and the author directly in those HTML files.</p>
+  <p>The canonical and social links in each page head point at this sample address. When the site has its own domain, replace <code>https://aleex9311.github.io/the-lantern-keeper/</code> with that domain.</p>
+  <p><a href="index.html">Back to the sample page</a></p>
+</main>
+<footer class="site"><div class="wrap"><p class="badge">Sample project</p><p>Website by <a href="https://aleex9311.github.io/">Aleks Kmetec</a></p></div></footer>
+</body>
+</html>

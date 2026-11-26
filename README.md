@@ -11,6 +11,7 @@ The live site is [aleex9311.github.io](https://aleex9311.github.io/). GitHub Pag
 - `/linden-table/` — sample bistro site
 - `/orchard-desk/` — sample product landing page
 - `/quote-bench/` — sample quote comparison tool
+- `/credits.html` — Unsplash photograph credits
 
 The four projects are fictional demonstrations. Each project folder can stand on its own.
 

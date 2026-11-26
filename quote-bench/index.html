@@ -14,13 +14,15 @@
 <meta property="og:image" content="https://aleex9311.github.io/quote-bench/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Quote Bench, a sample comparison of three fictional studio quotes">
+<meta property="og:image:alt" content="A bright modern living room, the hero of the Quote Bench sample">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Quote Bench · sample quote comparison">
 <meta name="twitter:description" content="Compare three fictional studios. The figures update in the browser.">
 <meta name="twitter:image" content="https://aleex9311.github.io/quote-bench/og.png">
-<meta name="theme-color" content="#1c1916">
+<meta name="theme-color" content="#f7f5f2">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/cormorant-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/base.css">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -30,7 +32,10 @@
   <span class="badge">Sample project</span>
 </header>
 <main id="content">
-  <section class="intro" id="top">
+  <section class="hero shot" id="top">
+    <img src="images/hero.webp" width="1920" height="1200" alt="A bright open-plan living room with a pale sofa, timber wall, and glass doors to a terrace." fetchpriority="high">
+  </section>
+  <section class="intro">
     <div class="wrap">
       <p class="kicker">Sample project · Web app</p>
       <h1>Quote Bench</h1>
@@ -97,6 +102,10 @@
     </div>
   </section>
 
+  <figure class="interlude shot">
+    <img src="images/house.webp" width="1800" height="1100" alt="A modern timber house at dusk, with warm light in the rooms and a tree in the garden." loading="lazy">
+  </figure>
+
   <section class="about">
     <div class="wrap">
       <h2>Fictional rates</h2>
@@ -115,18 +124,9 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">Paperlane</th>
-            <td>€640</td><td>€140</td><td>€300</td><td>€45</td><td>×1.5</td>
-          </tr>
-          <tr>
-            <th scope="row">Northglass</th>
-            <td>€900</td><td>€180</td><td>€420</td><td>€60</td><td>×1.35</td>
-          </tr>
-          <tr>
-            <th scope="row">Holm &amp; Co.</th>
-            <td>€1,200</td><td>€220</td><td>€560</td><td>€80</td><td>×1.25</td>
-          </tr>
+          <tr><th scope="row">Paperlane</th><td>€640</td><td>€140</td><td>€300</td><td>€45</td><td>×1.5</td></tr>
+          <tr><th scope="row">Northglass</th><td>€900</td><td>€180</td><td>€420</td><td>€60</td><td>×1.35</td></tr>
+          <tr><th scope="row">Holm &amp; Co.</th><td>€1,200</td><td>€220</td><td>€560</td><td>€80</td><td>×1.25</td></tr>
         </tbody>
       </table>
       </div>
@@ -139,6 +139,7 @@
     <p class="badge">Sample project</p>
     <p>Paperlane, Northglass, and Holm &amp; Co. are fictional.</p>
     <p>Website by <a href="https://aleex9311.github.io/">Aleks Kmetec</a></p>
+    <p><a href="/credits.html">Photograph credits</a></p>
   </div>
 </footer>
 <script src="app.js"></script>
